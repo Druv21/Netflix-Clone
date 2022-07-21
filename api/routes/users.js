@@ -65,4 +65,42 @@ router.get('/',verify,async (req,res)=>{
     }
 })
 
+router.get('/stats',async (req,res)=>{
+    const today=new Date()
+    const laYear=today.setFullYear(today.setFullYear() -1)
+
+    const monthsArray= [
+        "January",
+        "Febraury",
+        "March",
+        "April",
+        "May",
+        "June",
+        "July",
+        "August",
+        "October",
+        "November",
+        "December",
+    ]
+
+    try{
+        const data=await User.aggregate([
+            {
+                $project:{
+                    month: {$month: "$createdAt"}
+                }
+            },
+            {
+                $group: {
+                    _id:"$month",
+                    total: {$sum:1},
+                }
+            }
+        ])
+        res.status(200).json(data)
+    }catch(err){
+        res.status(500).json(err)
+    }
+})
+
 module.exports=router
