@@ -1,28 +1,29 @@
 .register{
     width: 100vw;
     height: 100vh;
-    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%), url("https://media-assets-05.thedrum.com/cache/images/thedrum-prod/s3-news-tmp-10557-netflixa--default--1280.jpg");
+    //background: linear-gradient(to bottom, rgba(0, 0, 0, 0) -120%, rgba(0,0,0,1) 120%), url("https://media-assets-05.thedrum.com/cache/images/thedrum-prod/s3-news-tmp-10557-netflixa--default--1280.jpg");
+    background: radial-gradient(rgba(0,0,0,0.45) 25%, black 100%), url("https://media-assets-05.thedrum.com/cache/images/thedrum-prod/s3-news-tmp-10557-netflixa--default--1280.jpg");
     background-size: cover;
 
     .top{
         .wrapper{
-            padding: 20px 50px;
+            padding: 28px 56px;
             display: flex;
             align-items: center;
             justify-content: space-between;
 
             .logo{
-                height: 40px;
+                height: 45px;
             }
 
             .logInButton{
                 background-color: red;
                 border: none;
                 color: white;
-                border-radius: 5px;
-                padding: 5px 15px;
+                border-radius: 3px;
+                padding: 8px 20px;
                 font-size: 16px;
-                font-weight: 500;
+                font-weight: 400;
                 cursor: pointer;
             }
         }
@@ -39,13 +40,18 @@
         color: white;
 
         h1{
-            font-size: 50px;
+            font-size: 63px;
+            text-align: center;
+            margin-top: 85px;
         }
         h2{
-            margin: 20px;
+            margin: 15px;
+            font-size: 27px;
+            font-weight: 400;
         }
         p{
             font-size: 20px;
+            margin-top: 20px;
         }
 
         .input{
@@ -55,24 +61,32 @@
             justify-content: space-between;
             align-items: center;
             margin-top: 20px;
-            height: 50px;
+            height: 70px;
             border-radius: 5px;
 
             input{
-                flex: 9;
+                flex: 8;
                 height: 100%;
                 border: none;
                 padding: 0px 10px;
+
+                &::placeholder{
+                    font-size: 16px;
+                }
             }
             .registerButton{
-                flex: 3;
+                flex: 4;
                 height: 100%;
                 background-color: red;
                 border: none;
                 padding: 0;
                 color: white;
-                font-size: 20px;
+                font-size: 30px;
                 cursor: pointer;
+
+                .icon{
+                    padding-left: 10px;
+                }
             }
         }
     }

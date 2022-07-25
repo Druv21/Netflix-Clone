@@ -1,4 +1,5 @@
 import React, { useRef, useState } from "react";
+import { ArrowForwardIos } from '@material-ui/icons';
 import "./register.css";
 
 const Register = () => {
@@ -27,16 +28,17 @@ const Register = () => {
         </div>
       </div>
       <div className="container">
-        <h1>Unlimited movies, TV shows, and more.</h1>
+        <h1>Unlimited movies, TV <br/>shows, and more.</h1>
         <h2>Watch anywhere. Cancel anytime.</h2>
         <p>
           Ready to watch? Enter your email to create or restart your membership.
         </p>
         {!email ? (
           <div className="input">
-            <input type="email" placeholder="email address" ref={emailRef} />
+            <input type="email" placeholder="Email address" ref={emailRef} />
             <button className="registerButton" onClick={handleStart}>
-              Get Started
+              Get Started 
+              <ArrowForwardIos className="icon"/>
             </button>
           </div>
         ) : (
@@ -44,6 +46,7 @@ const Register = () => {
             <input type="password" placeholder="password" ref={passwordRef} />
             <button className="registerButton" onClick={handleFinish}>
               Start
+              <ArrowForwardIos className="icon"/>
             </button>
           </form>
         )}
