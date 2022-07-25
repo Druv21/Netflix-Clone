@@ -23,8 +23,13 @@
   background-color: var(--main-color);
   border: 1px solid white;
   color: white;
+  font-size: 15px;
   margin-left: 20px;
   padding: 5px;
+}
+
+.featured .category option {
+  font-size: 14px;
 }
 
 .featured img {

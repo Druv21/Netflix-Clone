@@ -17,8 +17,13 @@
             background-color: var(--main-color);
             border: 1px solid white;
             color: white;
+            font-size: 15px;
             margin-left: 20px;
             padding: 5px;
+        }
+
+        option{
+            font-size: 14px;
         }
     }
 
@@ -28,7 +33,7 @@
         object-fit: cover;
     }
 
-    .info{
+    .info{                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
         width: 35%;
         position: absolute;
         left: 50px;
