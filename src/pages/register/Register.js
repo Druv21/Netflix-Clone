@@ -1,5 +1,6 @@
 import React, { useRef, useState } from "react";
-import { ArrowForwardIos } from '@material-ui/icons';
+import { ArrowForwardIos } from "@material-ui/icons";
+import { Link } from "react-router-dom";
 import "./register.css";
 
 const Register = () => {
@@ -24,21 +25,29 @@ const Register = () => {
             src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/1280px-Netflix_2015_logo.svg.png"
             alt=""
           />
-          <button className="logInButton">Sign In</button>
+          <button className="logInButton">
+            <Link to="/login" className="link">
+              Sign In
+            </Link>
+          </button>
         </div>
       </div>
       <div className="container">
-        <h1>Unlimited movies, TV <br/>shows, and more.</h1>
+        <h1>
+          Unlimited movies, TV <br />
+          shows, and more.
+        </h1>
         <h2>Watch anywhere. Cancel anytime.</h2>
         <p>
           Ready to watch? Enter your email to create or restart your membership.
+          lorem5
         </p>
         {!email ? (
           <div className="input">
             <input type="email" placeholder="Email address" ref={emailRef} />
             <button className="registerButton" onClick={handleStart}>
-              Get Started 
-              <ArrowForwardIos className="icon"/>
+              Get Started
+              <ArrowForwardIos className="icon" />
             </button>
           </div>
         ) : (
@@ -46,7 +55,7 @@ const Register = () => {
             <input type="password" placeholder="password" ref={passwordRef} />
             <button className="registerButton" onClick={handleFinish}>
               Start
-              <ArrowForwardIos className="icon"/>
+              <ArrowForwardIos className="icon" />
             </button>
           </form>
         )}

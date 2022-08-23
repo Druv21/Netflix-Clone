@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import "./listItem.css";
 import {
   PlayArrow,
@@ -28,7 +29,9 @@ const ListItem = ({ index }) => {
           <video src={trailer} autoPlay={true} loop />
           <div className="itemInfo">
             <div className="icons">
-              <PlayArrow className="icon" />
+              <Link to="/watch">
+                <PlayArrow className="icon" />
+              </Link>
               <Add className="icon" />
               <ThumbUpAltOutlined className="icon" />
               <ThumbDownOutlined className="icon" />
@@ -39,8 +42,9 @@ const ListItem = ({ index }) => {
               <span>1999</span>
             </div>
             <div className="desc">
-              Lorem ispum dolor, sit amet
-              bcdhbbeyudgeydvywvdyuwvduvcbdhcbgyvcyetvduvydrxurs6rzx7tcyivbug
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi
+              non quis exercitationem culpa nesciunt nihil aut nostrum
+              explicabo.
             </div>
             <div className="genre">Action</div>
           </div>
