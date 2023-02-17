@@ -40,7 +40,6 @@ const Register = () => {
         <h2>Watch anywhere. Cancel anytime.</h2>
         <p>
           Ready to watch? Enter your email to create or restart your membership.
-          lorem5
         </p>
         {!email ? (
           <div className="input">
